@@ -1,0 +1,29 @@
+{
+  "name": "hgv-player",
+  "version": "1.0.0",
+  "private": true,
+  "description": "HGV Player - real-time YouTube watch party platform",
+  "workspaces": [
+    "shared",
+    "backend",
+    "frontend"
+  ],
+  "engines": {
+    "node": "^22.22.2 || ^24.15.0 || >=26"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n backend,frontend -c red,gray \"npm run dev -w backend\" \"npm run dev -w frontend\"",
+    "dev:backend": "npm run dev -w backend",
+    "dev:frontend": "npm run dev -w frontend",
+    "typecheck": "npm run typecheck -w shared && npm run typecheck -w backend && npm run typecheck -w frontend",
+    "build": "npm run typecheck -w shared && npm run build -w backend && npm run build -w frontend",
+    "start": "npm run start -w backend",
+    "test": "npm run test -w shared && npm run test -w backend && npm run test -w frontend",
+    "e2e": "node scripts/e2e.mjs"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6",
+    "playwright": "^1.64.1",
+    "typescript": "^5.9.3"
+  }
+}
