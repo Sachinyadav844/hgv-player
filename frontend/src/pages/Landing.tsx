@@ -6,10 +6,10 @@ import { Avatar } from '../components/ui';
 import type { Role } from '@hgv/shared';
 
 const LANES: { name: string; role: Role; from: string }[] = [
-  { name: 'Maya', role: 'HOST', from: '38%' },
-  { name: 'Dev', role: 'MODERATOR', from: '9%' },
-  { name: 'Sam', role: 'PARTICIPANT', from: '71%' },
-  { name: 'Lena', role: 'PARTICIPANT', from: '22%' },
+  { name: 'saumya', role: 'HOST', from: '38%' },
+  { name: 'sachin', role: 'MODERATOR', from: '9%' },
+  { name: 'vagmi', role: 'PARTICIPANT', from: '71%' },
+  { name: 'ridhii', role: 'PARTICIPANT', from: '22%' },
 ];
 
 function SyncIllustration() {
